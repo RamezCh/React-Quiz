@@ -86,3 +86,39 @@ function DateCounter() {
   );
 }
 export default DateCounter;
+
+/*
+Managing state with useReducer
+
+why useReducer?
+
+An alternative way of setting state, ideal for complex state and related pieces of state
+
+Stores related pieces of state in a state object
+
+useReducer needs reducer: fn containing all logic to update state. Decouples state logic from component
+
+reducer: pure function (no side effects!) that takes current state and action, and returns the next state
+
+action: object that describes how to update state
+
+dispatch: fn to trigger state updates, by "sending" actions from event handlers to the reducer
+
+
+- State Management with useState is not enough in certain Situations:
+
+1. When components have a lot of state variables and state updates, spread across many event handlers all over the component.
+
+2. Multiple state updates need to happen at the same time (as a reaciton to the same event, like 'starting a game')
+
+3. When updating one piece of state depends on one or multiple other piece of state
+
+In All these situations, useReducer can really help.
+
+Just like array.reduce(), reducers accumulate('reduce') actions over time
+
+State(what needs to be updated)
+Reducer(Who makes the update)
+Dispatcher(Who requests the update)
+Action(How to make the update)
+*/
